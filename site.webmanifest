@@ -1,0 +1,8 @@
+{
+  "name": "Luzitana Ar Condicionado",
+  "short_name": "Luzitana",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F7F4EE",
+  "theme_color": "#1B2430"
+}
