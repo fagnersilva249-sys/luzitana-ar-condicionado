@@ -239,6 +239,14 @@ body.nav-open{ overflow:hidden; }
 .svc-photo .svc-body{ position:relative; padding:clamp(20px,3vw,32px); display:flex; flex-direction:column; justify-content:flex-end; height:100%; min-height:inherit; }
 .svc-photo h3{ color:#fff; font-size:var(--t-2); margin-bottom:.3em; }
 .svc-photo p{ color:var(--off); font-size:.95rem; margin-bottom:0; max-width:40ch; }
+.svc-cta{
+  display:inline-flex; align-items:center; gap:.5em; align-self:flex-start; margin-top:16px;
+  font-family:var(--font-display); font-weight:600; font-size:.85rem;
+  padding:.6em 1.2em; border-radius:999px; background:var(--accent); color:var(--accent-ink);
+  text-decoration:none; transition:background .2s ease, transform .2s ease;
+}
+.svc-cta:hover{ background:var(--accent-2); transform:translateY(-1px); }
+.svc-cta .icon{ width:14px; height:14px; flex:none; }
 
 @media (max-width:1000px) and (min-width:641px){
   .services-grid{

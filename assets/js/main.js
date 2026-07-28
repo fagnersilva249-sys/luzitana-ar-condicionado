@@ -1,10 +1,6 @@
 (function(){
   "use strict";
-
-  /* A página sempre deve abrir no hero — nunca restaurar scroll de uma visita anterior */
-  if('scrollRestoration' in history){ history.scrollRestoration = 'manual'; }
-  if(!window.location.hash){ window.scrollTo(0, 0); }
-
+  /* Fix de scroll-restoration já aplicado inline no <head> (precisa rodar antes do parser). */
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* Header: sombra/blur ao rolar */
