@@ -1,6 +1,12 @@
 (function(){
   "use strict";
-  /* Fix de scroll-restoration já aplicado inline no <head> (precisa rodar antes do parser). */
+  /* Fix de scroll-restoration (reload normal) já aplicado inline no <head>, antes do parser.
+     Isso NÃO cobre o bfcache do Safari/mobile (voltar de outro app, gesto de "voltar" do navegador),
+     que congela e restaura a página inteira sem passar por reload — precisa do evento pageshow. */
+  window.addEventListener('pageshow', function(e){
+    if(e.persisted && !window.location.hash){ window.scrollTo(0, 0); }
+  });
+
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* Header: sombra/blur ao rolar */
