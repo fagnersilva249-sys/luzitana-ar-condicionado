@@ -1,5 +1,10 @@
 (function(){
   "use strict";
+
+  /* A página sempre deve abrir no hero — nunca restaurar scroll de uma visita anterior */
+  if('scrollRestoration' in history){ history.scrollRestoration = 'manual'; }
+  if(!window.location.hash){ window.scrollTo(0, 0); }
+
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* Header: sombra/blur ao rolar */
@@ -18,11 +23,14 @@
     var closeNav = function(){
       burger.setAttribute('aria-expanded','false');
       nav.classList.remove('open');
+      document.body.classList.remove('nav-open');
     };
     burger.addEventListener('click', function(){
       var open = burger.getAttribute('aria-expanded') === 'true';
-      burger.setAttribute('aria-expanded', String(!open));
-      nav.classList.toggle('open', !open);
+      var next = !open;
+      burger.setAttribute('aria-expanded', String(next));
+      nav.classList.toggle('open', next);
+      document.body.classList.toggle('nav-open', next);
     });
     nav.querySelectorAll('a').forEach(function(a){
       a.addEventListener('click', closeNav);
