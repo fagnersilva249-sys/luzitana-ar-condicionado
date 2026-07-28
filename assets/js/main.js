@@ -101,20 +101,6 @@
     });
   }
 
-  /* Cookie / LGPD */
-  var cookieBar = document.getElementById('cookie-bar');
-  if(cookieBar){
-    if(!localStorage.getItem('luzitana-cookie-consent')){ cookieBar.hidden = false; }
-    var setConsent = function(v){
-      localStorage.setItem('luzitana-cookie-consent', v);
-      cookieBar.hidden = true;
-    };
-    var accept = document.getElementById('cookie-accept');
-    var reject = document.getElementById('cookie-reject');
-    if(accept) accept.addEventListener('click', function(){ setConsent('accept'); });
-    if(reject) reject.addEventListener('click', function(){ setConsent('reject'); });
-  }
-
   /* Formulário de contato — sem backend, envia para o WhatsApp */
   var form = document.getElementById('contact-form');
   if(form){

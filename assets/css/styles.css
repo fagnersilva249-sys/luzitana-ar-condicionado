@@ -372,21 +372,6 @@ body.nav-open{ overflow:hidden; }
 }
 @keyframes wa-pulse{ 0%{ box-shadow:0 0 0 0 rgba(37,211,102,.55),0 8px 24px rgba(0,0,0,.25);} 100%{ box-shadow:0 0 0 18px rgba(37,211,102,0),0 8px 24px rgba(0,0,0,.25);} }
 
-/* ---------- Cookie / LGPD ---------- */
-#cookie-bar{
-  position:fixed; left:0; right:0; bottom:0; z-index:70; background:var(--ink); color:var(--off);
-  padding:18px clamp(20px,4vw,40px); display:flex; flex-wrap:wrap; gap:16px; align-items:center; justify-content:space-between;
-  box-shadow:0 -8px 24px rgba(0,0,0,.18);
-}
-#cookie-bar p{ margin:0; font-size:.88rem; max-width:60ch; color:#D3DCF2; }
-#cookie-bar a{ color:#fff; text-decoration:underline; }
-#cookie-bar .cookie-actions{ display:flex; gap:10px; flex:none; }
-#cookie-bar button{
-  font:inherit; font-family:var(--font-display); font-weight:600; font-size:.88rem; cursor:pointer;
-  padding:.7em 1.3em; border-radius:7px; border:1.5px solid rgba(234,241,252,.4); background:transparent; color:var(--off);
-}
-#cookie-accept{ background:var(--accent); border-color:var(--accent); color:var(--accent-ink); }
-
 /* ---------- Reveal (Tier 0 + Tier 2) ---------- */
 .reveal{ opacity:1; transform:none; }
 .js .reveal{ opacity:0; transform:translateY(28px); transition:opacity .7s ease, transform .7s ease; }
