@@ -216,7 +216,8 @@ body.nav-open{ overflow:hidden; }
   grid-template-areas:
     "conserto conserto instalacao"
     "conserto conserto manutencao"
-    "lavanderia pecas arusado";
+    "lavanderia pecas arusado"
+    "geladeira geladeira purificador";
   gap:20px;
 }
 .svc{ position:relative; border-radius:14px; overflow:hidden; }
@@ -226,9 +227,12 @@ body.nav-open{ overflow:hidden; }
 .svc-lavanderia{ grid-area:lavanderia; }
 .svc-pecas{ grid-area:pecas; }
 .svc-arusado{ grid-area:arusado; }
+.svc-geladeira{ grid-area:geladeira; }
+.svc-purificador{ grid-area:purificador; }
 
 .svc-photo{ min-height:220px; height:100%; color:#fff; }
 .svc-conserto.svc-photo{ min-height:460px; }
+.svc-geladeira.svc-photo{ min-height:280px; }
 .svc-photo .svc-media{ position:absolute; inset:0; z-index:-2; }
 .svc-photo .svc-media img{ width:100%; height:100%; object-fit:cover; transition:transform .6s ease; }
 .svc:hover .svc-media img{ transform:scale(1.05); }
@@ -255,14 +259,16 @@ body.nav-open{ overflow:hidden; }
       "conserto conserto"
       "instalacao manutencao"
       "lavanderia pecas"
-      "arusado arusado";
+      "arusado geladeira"
+      "purificador purificador";
   }
   .svc-conserto.svc-photo{ min-height:340px; }
+  .svc-purificador.svc-photo{ min-height:260px; }
 }
 @media (max-width:640px){
   .services-grid{
     grid-template-columns:1fr; grid-template-areas:
-      "conserto" "instalacao" "manutencao" "lavanderia" "pecas" "arusado";
+      "conserto" "instalacao" "manutencao" "lavanderia" "pecas" "arusado" "geladeira" "purificador";
   }
   .svc-conserto.svc-photo, .svc-photo{ min-height:280px; }
 }
