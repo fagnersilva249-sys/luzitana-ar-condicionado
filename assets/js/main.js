@@ -141,8 +141,8 @@
       var nome = document.getElementById('nome').value.trim();
       var telefone = document.getElementById('telefone').value.trim();
       var mensagem = document.getElementById('mensagem').value.trim();
-      var texto = 'Olá! Meu nome é ' + nome + '.%0ATelefone: ' + telefone + '%0A' + encodeURIComponent(mensagem);
-      var url = 'https://wa.me/555133439490?text=' + texto;
+      var msg = 'Olá! Meu nome é ' + nome + '.\nTelefone: ' + telefone + '\n' + mensagem;
+      var url = 'https://wa.me/555133439490?text=' + encodeURIComponent(msg);
       window.open(url, '_blank', 'noopener');
       status.textContent = 'Abrindo o WhatsApp para enviar sua mensagem…';
       status.setAttribute('data-state','ok');

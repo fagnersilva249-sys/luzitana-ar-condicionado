@@ -104,7 +104,7 @@ section{ scroll-margin-top: var(--header-h); }
 
 /* ---------- Header ---------- */
 .site-header{
-  position:sticky; top:0; z-index:50; height:var(--header-h);
+  position:sticky; top:0; z-index:90; height:var(--header-h);
   display:flex; align-items:center;
   background:rgba(247,250,254,.75);
   border-bottom:1px solid transparent;
@@ -286,7 +286,7 @@ section{ scroll-margin-top: var(--header-h); }
 .brands-band .eyebrow{ margin-bottom:0; }
 
 .marquee-toggle{
-  display:grid; place-items:center; width:38px; height:38px; border-radius:50%; flex:none;
+  display:grid; place-items:center; width:42px; height:42px; border-radius:50%; flex:none;
   border:1.5px solid rgba(234,241,252,.35); background:transparent; color:var(--off); cursor:pointer;
   transition:background .2s ease;
 }
