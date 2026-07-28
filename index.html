@@ -51,7 +51,7 @@
 <header class="site-header">
   <div class="container">
     <a class="logo" href="#topo" aria-label="Luzitana Ar Condicionado — início">
-      <img class="logo-img" src="img/logo-sm.jpg" width="240" height="134" alt="Luzitana Ar Condicionado">
+      <img class="logo-img" src="img/logo-sm.jpg" width="560" height="152" alt="Luzitana Ar Condicionado">
     </a>
 
     <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
@@ -225,13 +225,25 @@
 
   <!-- MARCAS ATENDIDAS -->
   <section class="brands-band" aria-labelledby="marcas-title">
-    <div class="container">
+    <div class="container brands-head">
       <span class="eyebrow on-dark" id="marcas-title">Marcas atendidas</span>
-      <div class="brands-list">
-        <span class="brand-chip">ELGIN</span>
-        <span class="brand-chip">Midea</span>
-        <span class="brand-chip">Carrier</span>
-        <span class="brand-chip">Springer</span>
+      <button type="button" class="marquee-toggle" id="marquee-toggle" aria-pressed="false">
+        <svg class="icon icon-pause" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+        <svg class="icon icon-play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 3 14 9-14 9V3z"/></svg>
+        <span class="visually-hidden">Pausar animação das marcas atendidas</span>
+      </button>
+    </div>
+    <p class="visually-hidden">ELGIN, Midea, Carrier e Springer.</p>
+    <div class="marquee">
+      <div class="marquee-track" id="marquee-track" aria-hidden="true">
+        <span class="brand-chip"><img class="brand-logo" src="img/marcas/elgin.svg" alt="" width="78" height="34">ELGIN</span>
+        <span class="brand-chip"><img class="brand-logo" src="img/marcas/midea.png" alt="" width="75" height="30">Midea</span>
+        <span class="brand-chip"><img class="brand-logo" src="img/marcas/carrier.png" alt="" width="76" height="30">Carrier</span>
+        <span class="brand-chip"><img class="brand-logo" src="img/marcas/springer.png" alt="" width="290" height="115">Springer</span>
+        <span class="brand-chip"><img class="brand-logo" src="img/marcas/elgin.svg" alt="" width="78" height="34">ELGIN</span>
+        <span class="brand-chip"><img class="brand-logo" src="img/marcas/midea.png" alt="" width="75" height="30">Midea</span>
+        <span class="brand-chip"><img class="brand-logo" src="img/marcas/carrier.png" alt="" width="76" height="30">Carrier</span>
+        <span class="brand-chip"><img class="brand-logo" src="img/marcas/springer.png" alt="" width="290" height="115">Springer</span>
       </div>
     </div>
   </section>
@@ -355,7 +367,7 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img class="logo-img footer-logo" src="img/logo.jpg" width="900" height="502" alt="Luzitana Ar Condicionado">
+        <img class="logo-img footer-logo" src="img/logo.jpg" width="1000" height="272" alt="Luzitana Ar Condicionado">
         <p>Conserto e instalação de ar-condicionado, máquinas de lavar e secar. Assistência autorizada em Porto Alegre - RS.</p>
       </div>
       <div class="footer-col">

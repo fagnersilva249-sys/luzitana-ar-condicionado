@@ -91,6 +91,16 @@
     });
   }
 
+  /* Carrossel de marcas — botão pausar/tocar (acessibilidade WCAG 2.2.2) */
+  var marqueeToggle = document.getElementById('marquee-toggle');
+  var marqueeTrack = document.getElementById('marquee-track');
+  if(marqueeToggle && marqueeTrack){
+    marqueeToggle.addEventListener('click', function(){
+      var paused = marqueeTrack.classList.toggle('paused');
+      marqueeToggle.setAttribute('aria-pressed', String(paused));
+    });
+  }
+
   /* Cookie / LGPD */
   var cookieBar = document.getElementById('cookie-bar');
   if(cookieBar){
