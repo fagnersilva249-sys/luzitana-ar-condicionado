@@ -101,16 +101,6 @@
     });
   }
 
-  /* Carrossel de marcas — botão pausar/tocar (acessibilidade WCAG 2.2.2) */
-  var marqueeToggle = document.getElementById('marquee-toggle');
-  var marqueeTrack = document.getElementById('marquee-track');
-  if(marqueeToggle && marqueeTrack){
-    marqueeToggle.addEventListener('click', function(){
-      var paused = marqueeTrack.classList.toggle('paused');
-      marqueeToggle.setAttribute('aria-pressed', String(paused));
-    });
-  }
-
   /* Cookie / LGPD */
   var cookieBar = document.getElementById('cookie-bar');
   if(cookieBar){
@@ -152,7 +142,7 @@
       var telefone = document.getElementById('telefone').value.trim();
       var mensagem = document.getElementById('mensagem').value.trim();
       var msg = 'Olá! Meu nome é ' + nome + '.\nTelefone: ' + telefone + '\n' + mensagem;
-      var url = 'https://wa.me/555133439490?text=' + encodeURIComponent(msg);
+      var url = 'https://wa.me/555133431879?text=' + encodeURIComponent(msg);
       window.open(url, '_blank', 'noopener');
       status.textContent = 'Abrindo o WhatsApp para enviar sua mensagem…';
       status.setAttribute('data-state','ok');
